@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CoronaComponent } from './corona.component';
+import { GermanyComponent } from './germany.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path: '',  component: CoronaComponent}
+  {path: '',  component: GermanyComponent}
 ];
 
 @NgModule({
@@ -14,4 +14,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class CoronaRoutingModule { }
+export class GermanyRoutingModule { }

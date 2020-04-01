@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { WorldComponent } from './world.component';
 import { Routes, RouterModule } from '@angular/router';
-import { EconomiesComponent } from './Economies.component';
 
 const routes: Routes = [
-  {path: '',  component: EconomiesComponent}
+  {path: '',  component: WorldComponent}
 ];
 
 @NgModule({
@@ -14,4 +14,4 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class EconomiesRoutingModule { }
+export class WorldRoutingModule { }

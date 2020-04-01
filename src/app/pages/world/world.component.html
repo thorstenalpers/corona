@@ -1,0 +1,63 @@
+  <p-table #tt [columns]="cols" [value]="confirmedByLocation" [paginator]="true" [rows]="20">
+  <ng-template pTemplate="caption">
+    <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+    <input
+      type="text"
+      pInputText
+      size="50"
+      placeholder="Global Filter"
+      (input)="tt.filterGlobal($event.target.value, 'contains')"
+      style="width:auto"
+    />
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th [pSortableColumn]="'id'">
+        id
+        <p-sortIcon [field]="'id'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'country'">
+        country
+        <p-sortIcon [field]="'country'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'population'">
+        population
+        <p-sortIcon [field]="'population'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'latest.confirmed'">
+        confirmed
+        <p-sortIcon [field]="'latest.confirmed'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'latest.deaths'">
+        deaths
+        <p-sortIcon [field]="'latest.deaths'"></p-sortIcon>
+      </th>
+      <th [pSortableColumn]="'latest.recovered'">
+        recovered
+        <p-sortIcon [field]="'latest.recovered'"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-data>
+    <tr>
+      <td>
+        {{ data.id }}
+      </td>
+      <td>
+        {{ data.country }}
+      </td>
+      <td>
+        {{ data.population }}
+      </td>
+      <td>
+        {{ data.latest.confirmed }}
+      </td>
+      <td>
+        {{ data.latest.deaths }}
+      </td>
+      <td>
+        {{ data.latest.recovered }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

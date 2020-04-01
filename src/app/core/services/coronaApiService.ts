@@ -64,7 +64,7 @@ export class CoronaApiService {
 
     return this.httpClient.request<LatestResponse>(
       'get',
-      `${this.basePath}/latest`,
+      `${this.basePath}/confirmed`,
       {
         params: queryParameters,
         headers,
